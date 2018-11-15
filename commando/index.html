@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>知乎日报</title>
+    <!-- <script src="js/mui.min.js"></script> -->
+    <link href="css/mui.min.css" rel="stylesheet"/>
+	<link href="css/icons-extra.css" rel="stylesheet" />
+	<style>
+		h3{
+			position: absolute;top: 320px;left: 40px;
+		}
+		#notice{
+			position: absolute;top: 10px; right: 40px;
+		}
+	</style>
+    <!-- <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script> -->
+</head>
+<body>
+	<div class="mui-off-canvas-wrap mui-draggable">
+	  <!-- 主页面容器 -->
+	  <div class="mui-inner-wrap">
+		 <!-- 菜单容器 -->
+		<aside class="mui-off-canvas-left">
+		  <div class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+			  <ul class="mui-table-view">
+				  <li class="mui-table-view-cell mui-media">
+				  	<a href="javascript:;">
+				  		<!-- <img class="mui-media-object mui-pull-left" src="https://pic1.zhimg.com/v2-05781ade78d2cd3275af1e4c47834ac4.jpg"> -->
+				  		<div class="mui-media-body">
+				  			任务
+				  			<!-- <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p> -->
+				  		</div>
+				  	</a>
+				  </li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="https://pic1.zhimg.com/v2-05781ade78d2cd3275af1e4c47834ac4.jpg">
+						<div class="mui-media-body" id="aChou">
+							阿丑真傻
+							<p class='mui-ellipsis'>点击有惊喜</p>
+						</div>
+					</a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</aside>
+		<!-- 主页面标题 -->
+		<header class="mui-bar mui-bar-nav">
+		  <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
+		  <h1 class="mui-title">首页</h1>
+		  <span class="mui-icon-extra mui-icon-extra-notice" id="notice"></span>
+		  <span class="mui-icon mui-icon-more mui-pull-right"></span>
+		</header>
+		<!-- 主页面内容容器 -->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+		  <div class="mui-scroll">
+			  <ul class="mui-table-view mui-table-view-chevron"></ul>
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="https://pic4.zhimg.com/v2-a4f8851a990ca5957d556c48e5f06c07.jpg" height="400px">
+							<h3>我们大口吃肉，吃商家的肉，也吃羊毛党的肉</h3>
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="https://pic2.zhimg.com/v2-ca5fa870551091c91bacd0b825432f05.jpg" height="400px" title="从研发投入，看清了大国的未来之路">
+							<h3>从研发投入，看清了大国的未来之路</h3>
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="https://pic1.zhimg.com/v2-05781ade78d2cd3275af1e4c47834ac4.jpg" height="400px">
+							<h3>做科研，除了发论文之外，研究成果会有实际运用吗？</h3>
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img  src="https://pic4.zhimg.com/v2-c8c40a683628a9185b71d8341ae4234f.jpg" height="400px">
+							<h3>年少不知「仙股」愁，懂时已成退市股</h3>
+						</a>
+					</div>
+					<!-- 第四张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="https://pic4.zhimg.com/v2-a4f8851a990ca5957d556c48e5f06c07.jpg" height="400px">
+							<h3>我们大口吃肉，吃商家的肉，也吃羊毛党的肉</h3>
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="https://pic2.zhimg.com/v2-ca5fa870551091c91bacd0b825432f05.jpg" height="400px">
+							<h3>从研发投入，看清了大国的未来之路</h3>
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+				<h4>今日新闻</h4>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="https://pic1.zhimg.com/v2-05781ade78d2cd3275af1e4c47834ac4.jpg">
+							<div class="mui-media-body" id="one">
+								做科研，除了发论文之外，研究成果会有实际运用吗？
+								<!-- <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p> -->
+							</div>
+							
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="https://pic2.zhimg.com/v2-ca5fa870551091c91bacd0b825432f05.jpg">
+							<div class="mui-media-body" id="two">
+								从研发投入，看清了大国的未来之路
+								<!-- <p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p> -->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="https://pic4.zhimg.com/v2-a4f8851a990ca5957d556c48e5f06c07.jpg">
+							<div class="mui-media-body" id="three">
+								我们大口吃肉，吃商家的肉，也吃羊毛党的肉
+								<!-- <p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p> -->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="https://pic4.zhimg.com/v2-c8c40a683628a9185b71d8341ae4234f.jpg">
+							<div class="mui-media-body" id="four">
+								年少不知「仙股」愁，懂时已成退市股
+								<!-- <p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p> -->
+							</div>
+						</a>
+					</li>
+				</ul>
+		  </div>
+		</div>  
+	  </div>
+	</div>
+	
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+		var slider = mui("#slider");
+		mui.init({
+			swipeBack:true ,//启用右滑关闭功能
+			pullRefresh: {
+				container: '#pullrefresh',
+				down: {
+					style:'circle',
+					callback: pulldownRefresh
+				},
+				up: {
+					auto:true,
+					contentrefresh: '正在加载...',
+					callback: pullupRefresh
+				}
+			}
+			
+		});
+		window.onload = function(){
+				slider.slider({
+					interval: 4000
+				});
+				mui(".mui-scroll-wrapper").scroll({
+					deceleration:0.0005
+				});
+		}
+		mui(".mui-table-view").on("tap","#aChou",function(){
+			mui.openWindow({
+				url:"img.html"
+			})
+		})
+		var count = 0;
+		function pullupRefresh() {
+			setTimeout(function() {
+				mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+				var table = document.body.querySelector('.mui-table-view');
+				var cells = document.body.querySelectorAll('.mui-table-view-cell');
+				var newCount = cells.length>0?5:20;//首次加载20条，满屏
+				for (var i = cells.length, len = i + newCount; i < len; i++) {
+					var li = document.createElement('li');
+					li.className = 'mui-table-view-cell';
+					li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+					table.appendChild(li);
+				}
+			}, 1500);
+		}
+		function addData() {
+			var table = document.body.querySelector('.mui-table-view');
+			var cells = document.body.querySelectorAll('.mui-table-view-cell');
+			for(var i = cells.length, len = i + 5; i < len; i++) {
+				var li = document.createElement('li');
+				li.className = 'mui-table-view-cell';
+				li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+				//下拉刷新，新纪录插到最前面；
+				table.insertBefore(li, table.firstChild);
+			}
+		}
+		function pulldownRefresh() {
+			setTimeout(function() {
+				addData();
+				mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+				mui.toast("为你推荐了5篇文章");
+			}, 1500);
+		}
+	</script>
+</body>
+</html>
